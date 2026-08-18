@@ -401,20 +401,6 @@
             transition: transform 0.2s;
         }
         .lightbox-gallery img:hover { transform: scale(1.03); }
-        .gallery-empty {
-            grid-column: 1 / -1;
-            border: 2px dashed #c9c2b2;
-            border-radius: 12px;
-            aspect-ratio: 4/1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #9a9385;
-            font-size: 0.85rem;
-            text-align: center;
-            padding: 16px;
-            background: #f7f5ef;
-        }
 
         /* ===== RESPONSIVO ===== */
         @media (max-width: 767px) {
@@ -765,18 +751,23 @@
     </div>
 
     <script>
-        // Dados das galerias (adicione aqui as novas fotos quando carregar)
+        // Dados das galerias
         var galerias = {
             casa: {
                 titulo: "Nossa Casa",
                 fotos: [
-                    "foto-quarto.jpg"
+                    "foto-quarto.jpg",
+                    "quarto-01.jpg",
+                    "sala-1.png"
                 ]
             },
             historia: {
                 titulo: "Nossa História",
                 fotos: [
-                    "primeiras-fotos.jpeg"
+                    "primeiras-fotos.jpeg",
+                    "almoco-meninas.jpg",
+                    "historia-1.jpg",
+                    "Enfermeiro-1.jpg"
                 ]
             }
         };
@@ -823,11 +814,6 @@
                 });
                 lightboxGallery.appendChild(img);
             });
-            // Espaço para futuras fotos
-            var vazio = document.createElement('div');
-            vazio.className = 'gallery-empty';
-            vazio.innerHTML = '+ Novas fotos serão adicionadas aqui';
-            lightboxGallery.appendChild(vazio);
         }
 
         // Fechar lightbox

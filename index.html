@@ -27,16 +27,16 @@
         h1, h2, h3 { font-family: 'Inter', sans-serif; line-height: 1.25; color: #2f4a2f; font-weight: 700; }
         .section-label {
             display: inline-block;
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             font-weight: 600;
             letter-spacing: 0.14em;
             text-transform: uppercase;
             color: #6f8f6f;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
-        .section-title { font-size: 2rem; margin-bottom: 16px; }
-        @media (min-width: 768px) { .section-title { font-size: 2.4rem; } }
-        .section-sub { font-size: 1.02rem; color: #6b655c; max-width: 680px; }
+        .section-title { font-size: 1.8rem; margin-bottom: 14px; }
+        @media (min-width: 768px) { .section-title { font-size: 2.1rem; } }
+        .section-sub { font-size: 0.98rem; color: #6b655c; max-width: 680px; }
 
         /* ===== BOTÕES ===== */
         .btn-whatsapp {
@@ -46,8 +46,8 @@
             background: #25D366;
             color: #fff;
             font-weight: 600;
-            font-size: 0.98rem;
-            padding: 15px 30px;
+            font-size: 0.95rem;
+            padding: 14px 28px;
             border-radius: 50px;
             transition: background 0.25s, transform 0.2s;
             box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
@@ -68,18 +68,24 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 74px;
+            height: 82px;
         }
         .header-logo { display: flex; align-items: center; gap: 12px; }
-        .header-logo img { height: 52px; width: auto; }
-        .header-nav { display: none; gap: 26px; }
+        .header-logo img { height: 66px; width: auto; }
+        .header-nav { display: none; gap: 8px; }
         .header-nav a {
             font-size: 0.9rem;
             font-weight: 500;
             color: #4f4a42;
-            transition: color 0.2s;
+            padding: 8px 14px;
+            border-radius: 10px;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
         }
-        .header-nav a:hover { color: #6f8f6f; }
+        .header-nav a:hover {
+            background: #e9efe6;
+            color: #2f4a2f;
+            box-shadow: 0 2px 8px rgba(47,74,47,0.15);
+        }
         .header-cta { display: none; }
         @media (min-width: 900px) {
             .header-nav { display: flex; align-items: center; }
@@ -88,7 +94,7 @@
 
         /* ===== HERO ===== */
         .hero {
-            padding: 64px 0 72px;
+            padding: 56px 0 64px;
             background: linear-gradient(150deg, #f3f0e8 0%, #e9efe6 100%);
             position: relative;
             overflow: hidden;
@@ -102,23 +108,22 @@
             border-radius: 50%;
         }
         .hero .container { position: relative; z-index: 1; }
-        .hero-grid { display: grid; gap: 40px; align-items: center; }
+        .hero-grid { display: grid; gap: 36px; align-items: center; }
         @media (min-width: 768px) { .hero-grid { grid-template-columns: 1fr 1fr; } }
         .hero-tag {
             display: inline-block;
             background: rgba(111,143,111,0.14);
             color: #4d6b4d;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 600;
-            padding: 7px 18px;
+            padding: 6px 16px;
             border-radius: 50px;
-            margin-bottom: 22px;
+            margin-bottom: 18px;
         }
-        .hero h1 { font-size: 2.2rem; margin-bottom: 18px; }
-        @media (min-width: 768px) { .hero h1 { font-size: 2.8rem; } }
-        .hero p { font-size: 1.08rem; color: #5c564d; margin-bottom: 30px; max-width: 520px; }
+        .hero h1 { font-size: 2rem; margin-bottom: 16px; }
+        @media (min-width: 768px) { .hero h1 { font-size: 2.5rem; } }
+        .hero p { font-size: 1.04rem; color: #5c564d; margin-bottom: 26px; max-width: 520px; }
         .hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; }
-        .hero-media { display: grid; gap: 16px; }
         .hero-media .img-main {
             border-radius: 22px;
             overflow: hidden;
@@ -129,99 +134,278 @@
         .hero-media .img-main img { width: 100%; height: 100%; object-fit: cover; }
 
         /* ===== NÚMEROS ===== */
-        .numbers { padding: 52px 0; background: #2f4a2f; color: #fff; }
-        .numbers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; text-align: center; }
+        .numbers { padding: 44px 0; background: #2f4a2f; color: #fff; }
+        .numbers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; text-align: center; }
         @media (min-width: 600px) { .numbers-grid { grid-template-columns: repeat(4, 1fr); } }
-        .numbers-item h3 { font-size: 2rem; font-weight: 700; color: #dce7d5; }
-        .numbers-item p { font-size: 0.85rem; color: #b9cbb4; margin-top: 4px; }
+        .numbers-item h3 { font-size: 1.8rem; font-weight: 700; color: #dce7d5; }
+        .numbers-item p { font-size: 0.82rem; color: #b9cbb4; margin-top: 4px; }
 
         /* ===== SERVIÇOS ===== */
-        .services { padding: 80px 0; }
-        .services-head { margin-bottom: 44px; }
+        .services { padding: 68px 0; }
+        .services-head { margin-bottom: 32px; }
         .services-grid {
             display: grid;
-            gap: 20px;
-            margin-bottom: 44px;
+            gap: 12px;
+            margin-bottom: 36px;
         }
         @media (min-width: 600px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (min-width: 900px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (min-width: 1100px) { .services-grid { grid-template-columns: repeat(5, 1fr); } }
         .service-card {
             background: #fff;
-            border-radius: 18px;
-            padding: 28px 24px;
+            border-radius: 14px;
+            padding: 18px 16px;
             border: 1px solid #ece7dd;
             transition: transform 0.25s, box-shadow 0.25s;
         }
-        .service-card:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(0,0,0,0.07); }
+        .service-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.07); }
         .service-icon {
-            width: 48px; height: 48px;
-            border-radius: 14px;
+            width: 38px; height: 38px;
+            border-radius: 11px;
             background: #e9efe6;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
         .service-icon svg {
-            width: 26px;
-            height: 26px;
+            width: 20px;
+            height: 20px;
             stroke: #4d6b4d;
             fill: none;
             stroke-width: 1.8;
             stroke-linecap: round;
             stroke-linejoin: round;
         }
-        .service-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
-        .service-card p { font-size: 0.9rem; color: #6b655c; }
+        .service-card h3 { font-size: 0.95rem; margin-bottom: 6px; }
+        .service-card p { font-size: 0.8rem; color: #6b655c; }
         .services-feature {
             display: grid;
-            gap: 28px;
+            gap: 24px;
             align-items: center;
             background: #fff;
-            border-radius: 22px;
-            padding: 32px;
+            border-radius: 18px;
+            padding: 26px;
             border: 1px solid #ece7dd;
         }
         @media (min-width: 768px) { .services-feature { grid-template-columns: 1fr 1fr; } }
-        .services-feature img { border-radius: 16px; aspect-ratio: 3/2; object-fit: cover; width: 100%; }
-        .services-feature h3 { font-size: 1.5rem; margin-bottom: 14px; }
-        .services-feature p { color: #6b655c; margin-bottom: 12px; }
+        .services-feature img { border-radius: 14px; aspect-ratio: 3/2; object-fit: cover; width: 100%; }
+        .services-feature h3 { font-size: 1.3rem; margin-bottom: 12px; }
+        .services-feature p { color: #6b655c; margin-bottom: 10px; font-size: 0.92rem; }
 
-        /* ===== NOSSA CASA ===== */
-        .nossa-casa { padding: 80px 0; background: #fff; }
-        .nossa-casa .container > .section-sub { margin-bottom: 40px; }
+        /* ===== NOSSA CASA / HISTÓRIA ===== */
+        .nossa-casa { padding: 68px 0; background: #fff; }
+        .historia { padding: 68px 0; }
+        .nossa-casa .container > .section-sub,
+        .historia .container > .section-sub { margin-bottom: 32px; }
         .casa-intro {
             display: grid;
-            gap: 32px;
+            gap: 28px;
             align-items: center;
-            margin-bottom: 40px;
         }
         @media (min-width: 768px) { .casa-intro { grid-template-columns: 1fr 1fr; } }
-        .casa-intro img { border-radius: 20px; aspect-ratio: 4/3; object-fit: cover; width: 100%; }
-        .casa-intro h3 { font-size: 1.5rem; margin-bottom: 14px; }
-        .casa-intro p { color: #6b655c; margin-bottom: 12px; }
+        .casa-intro h3 { font-size: 1.3rem; margin-bottom: 12px; }
+        .casa-intro p { color: #6b655c; margin-bottom: 10px; font-size: 0.92rem; }
 
-        /* ===== GALERIA ===== */
-        .gallery-grid {
-            display: grid;
-            gap: 16px;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        @media (min-width: 700px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
-        .gallery-item {
-            border-radius: 16px;
+        /* ===== GATILHO DE GALERIA ===== */
+        .gallery-trigger {
+            position: relative;
+            border-radius: 18px;
             overflow: hidden;
             aspect-ratio: 4/3;
             background: #e3dfd4;
             cursor: pointer;
-            transition: transform 0.3s;
+            display: block;
         }
-        .gallery-item:hover { transform: scale(1.02); }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
-        .gallery-placeholder {
-            border: 2px dashed #c9c2b2;
+        .gallery-trigger img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+        .gallery-trigger:hover img { transform: scale(1.04); }
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(47,74,47,0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .gallery-trigger:hover .gallery-overlay { opacity: 1; }
+        .gallery-btn {
+            background: #fff;
+            color: #2f4a2f;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 12px 22px;
+            border-radius: 50px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
+
+        /* ===== DEPOIMENTOS ===== */
+        .depoimentos { padding: 68px 0; background: #fff; }
+        .depoimentos .container > .section-sub { margin-bottom: 32px; }
+        .depoimentos-grid { display: grid; gap: 20px; }
+        @media (min-width: 600px) { .depoimentos-grid { grid-template-columns: repeat(2, 1fr); } }
+        .depo-card {
+            background: #f7f5ef;
             border-radius: 16px;
+            padding: 26px;
+            border-left: 4px solid #6f8f6f;
+        }
+        .depo-card .stars { color: #f5b301; font-size: 1rem; margin-bottom: 12px; letter-spacing: 2px; }
+        .depo-card p { font-style: italic; color: #4f4a42; font-size: 0.92rem; margin-bottom: 14px; }
+        .depo-author { font-weight: 600; font-size: 0.88rem; color: #2f4a2f; }
+        .depo-note {
+            margin-top: 24px;
+            padding: 16px 20px;
+            background: #e9efe6;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            color: #4d6b4d;
+        }
+
+        /* ===== CONTATO / MAPA ===== */
+        .contato { padding: 68px 0; }
+        .contato-grid { display: grid; gap: 36px; }
+        @media (min-width: 768px) { .contato-grid { grid-template-columns: 1fr 1fr; } }
+        .contato-info h3 { font-size: 1.3rem; margin-bottom: 18px; }
+        .contato-item { display: flex; gap: 14px; margin-bottom: 18px; align-items: flex-start; }
+        .contato-icon {
+            width: 40px; height: 40px;
+            border-radius: 11px;
+            background: #e9efe6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .contato-item strong { display: block; font-size: 0.92rem; color: #2f4a2f; }
+        .contato-item span { font-size: 0.9rem; color: #6b655c; }
+        .contato-map {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+            min-height: 300px;
+            background: #e3dfd4;
+        }
+        .contato-map iframe { width: 100%; height: 100%; min-height: 300px; border: 0; display: block; }
+
+        /* ===== CTA FINAL ===== */
+        .cta-final {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #2f4a2f 0%, #3f5f3f 100%);
+            color: #fff;
+            text-align: center;
+        }
+        .cta-final h2 { font-size: 1.7rem; color: #fff; margin-bottom: 14px; }
+        .cta-final p { color: #c8d7c3; max-width: 520px; margin: 0 auto 26px; font-size: 1rem; }
+        .cta-final .btn-whatsapp { margin: 0 auto; }
+
+        /* ===== FOOTER ===== */
+        .footer { padding: 36px 0; background: #223a22; color: #b9cbb4; font-size: 0.86rem; }
+        .footer-grid { display: grid; gap: 22px; }
+        @media (min-width: 600px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
+        .footer h4 { color: #fff; font-weight: 600; margin-bottom: 10px; font-size: 0.98rem; }
+        .footer p, .footer a { color: #b9cbb4; line-height: 1.9; }
+        .footer a:hover { color: #dce7d5; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            margin-top: 28px;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.78rem;
+        }
+
+        /* ===== WHATSAPP FLUTUANTE ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 22px; right: 22px;
+            z-index: 200;
+            width: 56px; height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 22px rgba(37,211,102,0.45);
+            transition: transform 0.2s;
+        }
+        .whatsapp-float:hover { transform: scale(1.08); }
+        .whatsapp-float svg { width: 28px; height: 28px; fill: #fff; }
+
+        /* ===== LIGHTBOX ===== */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 300;
+            background: rgba(20,30,20,0.92);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .lightbox.open { display: flex; }
+        .lightbox-content {
+            background: #fff;
+            border-radius: 18px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 92vh;
+            overflow-y: auto;
+            padding: 20px;
+            position: relative;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 12px; right: 12px;
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            border: none;
+            background: #e9efe6;
+            color: #2f4a2f;
+            font-size: 1.4rem;
+            cursor: pointer;
+            line-height: 1;
+            z-index: 2;
+        }
+        .lightbox-close:hover { background: #d5e2d0; }
+        .lightbox-main { border-radius: 12px; width: 100%; max-height: 60vh; object-fit: contain; }
+        .lightbox-gallery-btn {
+            display: block;
+            margin: 16px auto 0;
+            background: #2f4a2f;
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.92rem;
+            padding: 12px 26px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .lightbox-gallery-btn:hover { background: #3f5f3f; }
+        .lightbox-gallery {
+            display: none;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 18px;
+        }
+        @media (min-width: 600px) { .lightbox-gallery { grid-template-columns: repeat(3, 1fr); } }
+        .lightbox-gallery.open { display: grid; }
+        .lightbox-gallery img {
+            width: 100%;
             aspect-ratio: 4/3;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .lightbox-gallery img:hover { transform: scale(1.03); }
+        .gallery-empty {
+            grid-column: 1 / -1;
+            border: 2px dashed #c9c2b2;
+            border-radius: 12px;
+            aspect-ratio: 4/1;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -232,120 +416,13 @@
             background: #f7f5ef;
         }
 
-        /* ===== NOSSA HISTÓRIA ===== */
-        .historia { padding: 80px 0; }
-        .historia .container > .section-sub { margin-bottom: 40px; }
-        .historia-intro {
-            display: grid;
-            gap: 32px;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-        @media (min-width: 768px) { .historia-intro { grid-template-columns: 1fr 1fr; } }
-        .historia-intro img { border-radius: 20px; aspect-ratio: 3/4; object-fit: cover; width: 100%; }
-        .historia-intro h3 { font-size: 1.5rem; margin-bottom: 14px; }
-        .historia-intro p { color: #6b655c; margin-bottom: 12px; }
-
-        /* ===== DEPOIMENTOS ===== */
-        .depoimentos { padding: 80px 0; background: #fff; }
-        .depoimentos .container > .section-sub { margin-bottom: 40px; }
-        .depoimentos-grid { display: grid; gap: 24px; }
-        @media (min-width: 600px) { .depoimentos-grid { grid-template-columns: repeat(2, 1fr); } }
-        .depo-card {
-            background: #f7f5ef;
-            border-radius: 18px;
-            padding: 30px;
-            border-left: 4px solid #6f8f6f;
-        }
-        .depo-card .stars { color: #f5b301; font-size: 1.1rem; margin-bottom: 14px; letter-spacing: 2px; }
-        .depo-card p { font-style: italic; color: #4f4a42; font-size: 0.95rem; margin-bottom: 16px; }
-        .depo-author { font-weight: 600; font-size: 0.9rem; color: #2f4a2f; }
-        .depo-note {
-            margin-top: 28px;
-            padding: 18px 22px;
-            background: #e9efe6;
-            border-radius: 14px;
-            font-size: 0.88rem;
-            color: #4d6b4d;
-        }
-
-        /* ===== CONTATO / MAPA ===== */
-        .contato { padding: 80px 0; }
-        .contato-grid { display: grid; gap: 40px; }
-        @media (min-width: 768px) { .contato-grid { grid-template-columns: 1fr 1fr; } }
-        .contato-info h3 { font-size: 1.4rem; margin-bottom: 20px; }
-        .contato-item { display: flex; gap: 14px; margin-bottom: 20px; align-items: flex-start; }
-        .contato-icon {
-            width: 44px; height: 44px;
-            border-radius: 12px;
-            background: #e9efe6;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-        .contato-item strong { display: block; font-size: 0.95rem; color: #2f4a2f; }
-        .contato-item span { font-size: 0.92rem; color: #6b655c; }
-        .contato-map {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 16px 40px rgba(0,0,0,0.08);
-            min-height: 320px;
-            background: #e3dfd4;
-        }
-        .contato-map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; }
-
-        /* ===== CTA FINAL ===== */
-        .cta-final {
-            padding: 72px 0;
-            background: linear-gradient(135deg, #2f4a2f 0%, #3f5f3f 100%);
-            color: #fff;
-            text-align: center;
-        }
-        .cta-final h2 { font-size: 1.9rem; color: #fff; margin-bottom: 16px; }
-        .cta-final p { color: #c8d7c3; max-width: 540px; margin: 0 auto 30px; font-size: 1.05rem; }
-        .cta-final .btn-whatsapp { margin: 0 auto; }
-
-        /* ===== FOOTER ===== */
-        .footer { padding: 40px 0; background: #223a22; color: #b9cbb4; font-size: 0.88rem; }
-        .footer-grid { display: grid; gap: 24px; }
-        @media (min-width: 600px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
-        .footer h4 { color: #fff; font-weight: 600; margin-bottom: 12px; font-size: 1rem; }
-        .footer p, .footer a { color: #b9cbb4; line-height: 1.9; }
-        .footer a:hover { color: #dce7d5; }
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.08);
-            margin-top: 32px;
-            padding-top: 24px;
-            text-align: center;
-            font-size: 0.8rem;
-        }
-
-        /* ===== WHATSAPP FLUTUANTE ===== */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px; right: 24px;
-            z-index: 200;
-            width: 58px; height: 58px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 6px 22px rgba(37,211,102,0.45);
-            transition: transform 0.2s;
-        }
-        .whatsapp-float:hover { transform: scale(1.08); }
-        .whatsapp-float svg { width: 30px; height: 30px; fill: #fff; }
-
         /* ===== RESPONSIVO ===== */
         @media (max-width: 767px) {
-            .hero { padding: 48px 0 56px; }
-            .hero h1 { font-size: 1.8rem; }
-            .numbers-grid { gap: 20px; }
-            .numbers-item h3 { font-size: 1.6rem; }
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero { padding: 44px 0 52px; }
+            .hero h1 { font-size: 1.7rem; }
+            .numbers-grid { gap: 18px; }
+            .numbers-item h3 { font-size: 1.5rem; }
+            .header-logo img { height: 56px; }
         }
     </style>
 </head>
@@ -424,8 +501,8 @@
         <div class="container">
             <div class="services-head">
                 <span class="section-label">Nossos cuidados</span>
-                <h2 class="section-title">Cuidado especializado para cada caso, com o coração em cada detalhe</h2>
-                <p class="section-sub">Nossa equipe, com mais de 32 anos de experiência, trata cada residente como única. Cada história, cada necessidade e cada momento são respeitados com dedicação e humanidade.</p>
+                <h2 class="section-title">Cuidado especializado, com o coração em cada detalhe</h2>
+                <p class="section-sub">Nossa equipe, com mais de 32 anos de experiência, trata cada residente como única, com dedicação e humanidade.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -433,78 +510,78 @@
                         <svg viewBox="0 0 24 24"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
                     </div>
                     <h3>Médico</h3>
-                    <p>Acompanhamento médico regular para monitorar a saúde e o bem-estar de cada residente.</p>
+                    <p>Acompanhamento regular da saúde de cada residente.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                     </div>
-                    <h3>Enfermagem 24 horas</h3>
-                    <p>Equipe de enfermagem presente integralmente, pronta para cuidar e acolher a qualquer momento.</p>
+                    <h3>Enfermagem 24h</h3>
+                    <p>Equipe presente integralmente, pronta para cuidar e acolher.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
                     </div>
-                    <h3>Monitoramento 24 horas</h3>
-                    <p>Vigilância contínua e supervisão constante para garantir a segurança e a tranquilidade de cada residente.</p>
+                    <h3>Monitoramento 24h</h3>
+                    <p>Vigilância contínua para segurança e tranquilidade.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M12 9v4M10 11h4"/></svg>
                     </div>
                     <h3>Acompanhamento hospitalar</h3>
-                    <p>Suporte completo em internações e consultas, garantindo que a residente nunca fique sozinha.</p>
+                    <p>Suporte completo em internações e consultas.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
                     </div>
                     <h3>Pós-cirúrgico</h3>
-                    <p>Cuidado intensivo e atento durante a recuperação, com acompanhamento multidisciplinar.</p>
+                    <p>Cuidado atento durante toda a recuperação.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                     </div>
                     <h3>Fisioterapia</h3>
-                    <p>Sessões de fisioterapia motora e respiratória para reabilitação e manutenção da mobilidade.</p>
+                    <p>Reabilitação e manutenção da mobilidade.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
                     </div>
                     <h3>Nutricionista</h3>
-                    <p>Cardápio balanceado e individualizado, respeitando dietas e necessidades específicas.</p>
+                    <p>Cardápio balanceado e individualizado.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
                     </div>
-                    <h3>Seis refeições diárias</h3>
-                    <p>Refeições preparadas com carinho, unindo sabor de comida caseira ao rigor nutricional.</p>
+                    <h3>Seis refeições</h3>
+                    <p>Sabor de comida caseira com rigor nutricional.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
                     </div>
                     <h3>Atividades e recreação</h3>
-                    <p>Oficinas de memória, jogos, música e momentos de convivência para um envelhecimento ativo e feliz.</p>
+                    <p>Jogos, música e convivência para um envelhecimento feliz.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     </div>
                     <h3>Equipe qualificada</h3>
-                    <p>Profissionais treinados, dedicados e apaixonados pelo que fazem, com mais de 32 anos de experiência.</p>
+                    <p>Profissionais dedicados, com mais de 32 anos de experiência.</p>
                 </div>
             </div>
             <div class="services-feature">
                 <img src="foto-cartas.jpg" alt="Residentes felizes jogando cartas" />
                 <div>
                     <h3>Aqui, cada dia é uma celebração da vida</h3>
-                    <p>Nossas atividades vão muito além do cuidado. São momentos de alegria, amizade e convivência, onde cada senhora se sente em casa, valorizada e feliz.</p>
-                    <p>Do jogo de cartas à roda de conversa, acreditamos que a felicidade faz parte do cuidado. É por isso que cada detalhe da nossa rotina é pensado para trazer leveza e bem-estar.</p>
+                    <p>Nossas atividades vão além do cuidado: são momentos de alegria, amizade e convivência, onde cada senhora se sente em casa, valorizada e feliz.</p>
+                    <p>Do jogo de cartas à roda de conversa, a felicidade faz parte do cuidado em cada detalhe da nossa rotina.</p>
                 </div>
             </div>
         </div>
@@ -515,19 +592,18 @@
         <div class="container">
             <span class="section-label">Nossa Casa</span>
             <h2 class="section-title">Um lar onde a felicidade faz morada</h2>
-            <p class="section-sub">Um ambiente familiar, sereno e tranquilo. Um lugar onde se ri, se vive e se sente acolhido de verdade, com respeito, dignidade e muito carinho.</p>
+            <p class="section-sub">Um ambiente familiar, sereno e tranquilo, onde se ri, se vive e se sente acolhido de verdade, com respeito, dignidade e muito carinho.</p>
             <div class="casa-intro">
-                <img src="casa-nova.jpg" alt="Frente da Casa Débora" />
+                <a class="gallery-trigger" data-gallery="casa" href="javascript:void(0)">
+                    <img src="foto-quarto.jpg" alt="Quarto aconchegante" />
+                    <div class="gallery-overlay">
+                        <span class="gallery-btn">Abrir galeria</span>
+                    </div>
+                </a>
                 <div>
                     <h3>Ambiente pensado para o bem-estar</h3>
-                    <p>Nossa casa foi planejada para oferecer conforto, segurança e qualidade de vida. Cada espaço é acolhedor e adaptado para que as residentes se sintam em um verdadeiro lar.</p>
-                    <p>Aqui, a idosa conta com cuidado, respeito e dignidade em cada detalhe, do quarto aconchegante às áreas de convivência.</p>
+                    <p>Nossa casa foi planejada para oferecer conforto, segurança e qualidade de vida, com espaços acolhedores e adaptados para que as residentes se sintam em um verdadeiro lar.</p>
                 </div>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="foto-quarto.jpg" alt="Quarto aconchegante" /></div>
-                <div class="gallery-placeholder">+ Fotos da casa<br />(serão carregadas)</div>
-                <div class="gallery-placeholder">+ Fotos da casa<br />(serão carregadas)</div>
             </div>
         </div>
     </section>
@@ -538,19 +614,18 @@
             <span class="section-label">Nossa História</span>
             <h2 class="section-title">Mais de 5 anos de confiança e excelência</h2>
             <p class="section-sub">Uma trajetória construída com respeito, dedicação e o cuidado personalizado de cada caso, de cada história, de cada vida.</p>
-            <div class="historia-intro">
+            <div class="casa-intro">
                 <div>
                     <h3>Uma instituição de confiança</h3>
-                    <p>Ao longo de mais de 5 anos, a Casa Débora recebeu senhoras residentes nos mais diversos casos e situações, tratando, cuidando e melhorando a qualidade de vida na terceira idade.</p>
-                    <p>Tratamos cada paciente com o devido respeito e dignidade, considerando cada caso como exclusivo e priorizando o cuidado personalizado de cada residente.</p>
-                    <p>Temos orgulho de manter uma história idônea e de excelência em hospedagem na terceira idade.</p>
+                    <p>Ao longo de mais de 5 anos, recebemos senhoras residentes nos mais diversos casos e situações, tratando, cuidando e melhorando a qualidade de vida na terceira idade.</p>
+                    <p>Tratamos cada paciente com respeito e dignidade, considerando cada caso como exclusivo e priorizando o cuidado personalizado de cada residente.</p>
                 </div>
-                <img src="primeiras-fotos.jpeg" alt="Momentos da história da Casa Débora" />
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="primeiras-fotos.jpeg" alt="Comemoração na Casa Débora" /></div>
-                <div class="gallery-placeholder">+ Fotos antigas<br />(serão carregadas)</div>
-                <div class="gallery-placeholder">+ Fotos antigas<br />(serão carregadas)</div>
+                <a class="gallery-trigger" data-gallery="historia" href="javascript:void(0)">
+                    <img src="primeiras-fotos.jpeg" alt="Comemoração na Casa Débora" />
+                    <div class="gallery-overlay">
+                        <span class="gallery-btn">Abrir galeria</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -574,7 +649,7 @@
                 </div>
             </div>
             <div class="depo-note">
-                💬 Estes depoimentos serão preenchidos com as avaliações reais da sua ficha no Google. Para isso, acesse seu perfil no Google Meu Negócio, copie os comentários dos familiares e me envie, que eu insiro no código com os nomes corretos.
+                💬 Estes depoimentos serão preenchidos com as avaliações reais da sua ficha no Google. Acesse seu perfil no Google Meu Negócio, copie os comentários dos familiares e me envie, que eu insiro no código com os nomes corretos.
             </div>
         </div>
     </section>
@@ -585,7 +660,7 @@
             <span class="section-label">Contato</span>
             <h2 class="section-title">Venha nos visitar</h2>
             <p class="section-sub">Estamos na Zona Sul de São Paulo, em um bairro tranquilo e de fácil acesso. Agende uma visita e conheça nosso espaço de perto.</p>
-            <div class="contato-grid" style="margin-top:40px;">
+            <div class="contato-grid" style="margin-top:36px;">
                 <div class="contato-info">
                     <h3>Informações de contato</h3>
                     <div class="contato-item">
@@ -616,7 +691,7 @@
                             <span>debora.casaderepouso@gmail.com</span>
                         </div>
                     </div>
-                    <div style="margin-top:24px;">
+                    <div style="margin-top:22px;">
                         <a href="https://wa.me/5511986599539?text=Ol%C3%A1%20Gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Casa%20D%C3%A9bora" target="_blank" rel="noopener" class="btn-whatsapp">
                             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                             Falar com a equipe
@@ -678,6 +753,93 @@
     <a href="https://wa.me/5511986599539?text=Ol%C3%A1%20Gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Casa%20D%C3%A9bora" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">&times;</button>
+            <img class="lightbox-main" id="lightbox-main" src="" alt="" />
+            <button class="lightbox-gallery-btn" id="lightbox-gallery-btn">Abrir galeria</button>
+            <div class="lightbox-gallery" id="lightbox-gallery"></div>
+        </div>
+    </div>
+
+    <script>
+        // Dados das galerias (adicione aqui as novas fotos quando carregar)
+        var galerias = {
+            casa: {
+                titulo: "Nossa Casa",
+                fotos: [
+                    "foto-quarto.jpg"
+                ]
+            },
+            historia: {
+                titulo: "Nossa História",
+                fotos: [
+                    "primeiras-fotos.jpeg"
+                ]
+            }
+        };
+
+        var lightbox = document.getElementById('lightbox');
+        var lightboxMain = document.getElementById('lightbox-main');
+        var lightboxGallery = document.getElementById('lightbox-gallery');
+        var lightboxGalleryBtn = document.getElementById('lightbox-gallery-btn');
+        var galeriaAtual = null;
+
+        // Abrir lightbox ao clicar na imagem gatilho
+        document.querySelectorAll('.gallery-trigger').forEach(function(trigger) {
+            trigger.addEventListener('click', function() {
+                var nome = this.getAttribute('data-gallery');
+                var galeria = galerias[nome];
+                if (!galeria) return;
+                galeriaAtual = nome;
+                lightboxMain.src = this.querySelector('img').src;
+                lightboxMain.alt = galeria.titulo;
+                lightboxGallery.classList.remove('open');
+                lightboxGalleryBtn.style.display = 'block';
+                lightbox.classList.add('open');
+            });
+        });
+
+        // Abrir a galeria completa dentro do lightbox
+        lightboxGalleryBtn.addEventListener('click', function() {
+            renderGaleria();
+            lightboxGallery.classList.add('open');
+            lightboxGalleryBtn.style.display = 'none';
+        });
+
+        function renderGaleria() {
+            var galeria = galerias[galeriaAtual];
+            if (!galeria) return;
+            lightboxGallery.innerHTML = '';
+            galeria.fotos.forEach(function(foto) {
+                var img = document.createElement('img');
+                img.src = foto;
+                img.alt = galeria.titulo;
+                img.addEventListener('click', function() {
+                    lightboxMain.src = foto;
+                    lightboxMain.alt = galeria.titulo;
+                });
+                lightboxGallery.appendChild(img);
+            });
+            // Espaço para futuras fotos
+            var vazio = document.createElement('div');
+            vazio.className = 'gallery-empty';
+            vazio.innerHTML = '+ Novas fotos serão adicionadas aqui';
+            lightboxGallery.appendChild(vazio);
+        }
+
+        // Fechar lightbox
+        document.getElementById('lightbox-close').addEventListener('click', function() {
+            lightbox.classList.remove('open');
+        });
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('open');
+            }
+        });
+    </script>
 
 </body>
 </html>

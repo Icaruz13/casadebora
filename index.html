@@ -231,18 +231,12 @@
             border-radius: 16px;
             padding: 26px;
             border-left: 4px solid #6f8f6f;
+            display: flex;
+            flex-direction: column;
         }
         .depo-card .stars { color: #f5b301; font-size: 1rem; margin-bottom: 12px; letter-spacing: 2px; }
-        .depo-card p { font-style: italic; color: #4f4a42; font-size: 0.92rem; margin-bottom: 14px; }
+        .depo-card p { font-style: italic; color: #4f4a42; font-size: 0.92rem; margin-bottom: 14px; flex-grow: 1; }
         .depo-author { font-weight: 600; font-size: 0.88rem; color: #2f4a2f; }
-        .depo-note {
-            margin-top: 24px;
-            padding: 16px 20px;
-            background: #e9efe6;
-            border-radius: 12px;
-            font-size: 0.85rem;
-            color: #4d6b4d;
-        }
 
         .contato { padding: 68px 0; }
         .contato-grid { display: grid; gap: 36px; }
@@ -587,17 +581,24 @@
             <div class="depoimentos-grid">
                 <div class="depo-card">
                     <div class="stars">★★★★★</div>
-                    <p>"[Cole aqui o depoimento real de um familiar que avaliou a Casa Débora no Google]"</p>
-                    <div class="depo-author">— Nome do familiar</div>
+                    <p>"Só tenho elogios, equipe profissional, serviço de qualidade, tratamento humanizado, carinhoso e respeitoso com as residentes."</p>
+                    <div class="depo-author">— Edenise Duarte</div>
                 </div>
                 <div class="depo-card">
                     <div class="stars">★★★★★</div>
-                    <p>"[Cole aqui o depoimento real de outro familiar]"</p>
-                    <div class="depo-author">— Nome do familiar</div>
+                    <p>"Lugar aconchegante. Atendimento maravilhoso! Fiz essa avaliação apenas como visitante, hoje minha mãe está hospedada e só tenho elogios a fazer pelo tratamento que ela recebe. Todos os funcionários são prestativos e carinhosos. Ela participa de várias atividades manuais, recebe atendimento médico mensalmente e tem até cuidados estéticos! Ficamos tranquilos em razão do serviço prestado por todos, principalmente pela enfermeira Catarina, sempre atenciosa e competente. Recomendo! Parece uma casa de vó, inclusive com cheiro de bolo no horário de café."</p>
+                    <div class="depo-author">— Simone Sauro</div>
                 </div>
-            </div>
-            <div class="depo-note">
-                💬 Estes depoimentos serão preenchidos com as avaliações reais da sua ficha no Google. Acesse seu perfil no Google Meu Negócio, copie os comentários dos familiares e me envie, que eu insiro no código com os nomes corretos.
+                <div class="depo-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Melhor Casa para idosas viverem com respeito que lhes é dado com dignidade e muito Amor em todos os momentos, seja no banho, nas refeições, medicamentos, atenção e principalmente, no cuidado diário. Sou muito grata Casa Débora e Equipe!"</p>
+                    <div class="depo-author">— Heloísa Tanahara</div>
+                </div>
+                <div class="depo-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Excelente casa de repouso para senhoras. Profissionais competentes. Ambiente aconchegante."</p>
+                    <div class="depo-author">— Ricardo Marinho Batista</div>
+                </div>
             </div>
         </div>
     </section>
@@ -752,7 +753,6 @@
                 var img = document.createElement('img');
                 img.src = foto;
                 img.alt = galeria.titulo;
-                // Se a imagem falhar ao carregar, ela é removida da galeria (sem aviso)
                 img.onerror = function() {
                     this.onerror = null;
                     if (this.parentNode) {

@@ -707,16 +707,6 @@
     </div>
 
     <script>
-        // Imagem de reserva para quando uma foto não carregar
-        function fotoIndisponivel() {
-            return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(
-                "<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'>" +
-                "<rect width='100%' height='100%' fill='#e9efe6'/>" +
-                "<text x='50%' y='50%' fill='#6f8f6f' font-family='Arial' font-size='18' text-anchor='middle' dominant-baseline='middle'>Foto indisponível</text>" +
-                "</svg>"
-            );
-        }
-
         var galerias = {
             casa: {
                 titulo: "Nossa Casa",
@@ -731,7 +721,6 @@
                 fotos: [
                     "primeiras-fotos.jpeg",
                     "almoco-meninas.jpg",
-                    "historia-1.jpg",
                     "Enfermeiro-1.jpg"
                 ]
             }
@@ -763,10 +752,12 @@
                 var img = document.createElement('img');
                 img.src = foto;
                 img.alt = galeria.titulo;
-                // Se a imagem falhar, mostra o cartão "Foto indisponível"
+                // Se a imagem falhar ao carregar, ela é removida da galeria (sem aviso feio)
                 img.onerror = function() {
                     this.onerror = null;
-                    this.src = fotoIndisponivel();
+                    if (this.parentNode) {
+                        this.parentNode.removeChild(this);
+                    }
                 };
                 img.addEventListener('click', function() {
                     lightboxMain.src = foto;

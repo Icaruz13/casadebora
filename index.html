@@ -310,7 +310,7 @@
         .whatsapp-float:hover { transform: scale(1.08); }
         .whatsapp-float svg { width: 28px; height: 28px; fill: #fff; }
 
-        /* ===== LIGHTBOX / GALERIA (CORRIGIDO) ===== */
+        /* ===== LIGHTBOX / GALERIA ===== */
         .lightbox {
             position: fixed;
             inset: 0;
@@ -362,7 +362,6 @@
         @media (max-width: 600px) { .lightbox-gallery { grid-template-columns: repeat(2, 1fr); } }
         .lightbox-gallery img {
             width: 100%;
-            height: 100%;
             aspect-ratio: 4/3;
             object-fit: cover;
             border-radius: 10px;
@@ -532,7 +531,7 @@
                 <img src="foto-cartas.jpg" alt="Residentes felizes jogando cartas" />
                 <div>
                     <h3>Aqui, cada dia é uma celebração da vida</h3>
-                    <p>Nossas atividades vão além do cuidado: são momentos de alegria, amizade e convivência,onde cada senhora se sente em casa, valorizada e feliz.</p>
+                    <p>Nossas atividades vão além do cuidado: são momentos de alegria, amizade e convivência, onde cada senhora se sente em casa, valorizada e feliz.</p>
                     <p>Do jogo de cartas à roda de conversa, a felicidade faz parte do cuidado em cada detalhe da nossa rotina.</p>
                 </div>
             </div>
@@ -708,6 +707,16 @@
     </div>
 
     <script>
+        // Imagem de reserva para quando uma foto não carregar
+        function fotoIndisponivel() {
+            return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(
+                "<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'>" +
+                "<rect width='100%' height='100%' fill='#e9efe6'/>" +
+                "<text x='50%' y='50%' fill='#6f8f6f' font-family='Arial' font-size='18' text-anchor='middle' dominant-baseline='middle'>Foto indisponível</text>" +
+                "</svg>"
+            );
+        }
+
         var galerias = {
             casa: {
                 titulo: "Nossa Casa",
@@ -754,6 +763,11 @@
                 var img = document.createElement('img');
                 img.src = foto;
                 img.alt = galeria.titulo;
+                // Se a imagem falhar, mostra o cartão "Foto indisponível"
+                img.onerror = function() {
+                    this.onerror = null;
+                    this.src = fotoIndisponivel();
+                };
                 img.addEventListener('click', function() {
                     lightboxMain.src = foto;
                     lightboxMain.alt = galeria.titulo;

@@ -310,6 +310,7 @@
         .whatsapp-float:hover { transform: scale(1.08); }
         .whatsapp-float svg { width: 28px; height: 28px; fill: #fff; }
 
+        /* ===== LIGHTBOX / GALERIA (CORRIGIDO) ===== */
         .lightbox {
             position: fixed;
             inset: 0;
@@ -345,22 +346,30 @@
             z-index: 2;
         }
         .lightbox-close:hover { background: #d5e2d0; }
-        .lightbox-main { border-radius: 12px; width: 100%; max-height: 55vh; object-fit: contain; }
+        .lightbox-main {
+            border-radius: 12px;
+            width: 100%;
+            max-height: 55vh;
+            object-fit: contain;
+            background: #f0ede6;
+        }
         .lightbox-gallery {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 12px;
             margin-top: 18px;
         }
-        @media (min-width: 600px) { .lightbox-gallery { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 600px) { .lightbox-gallery { grid-template-columns: repeat(2, 1fr); } }
         .lightbox-gallery img {
             width: 100%;
+            height: 100%;
             aspect-ratio: 4/3;
             object-fit: cover;
             border-radius: 10px;
             cursor: pointer;
             transition: transform 0.2s;
             background: #e3dfd4;
+            display: block;
         }
         .lightbox-gallery img:hover { transform: scale(1.03); }
 
@@ -523,7 +532,7 @@
                 <img src="foto-cartas.jpg" alt="Residentes felizes jogando cartas" />
                 <div>
                     <h3>Aqui, cada dia é uma celebração da vida</h3>
-                    <p>Nossas atividades vão além do cuidado: são momentos de alegria, amizade e convivência, onde cada senhora se sente em casa, valorizada e feliz.</p>
+                    <p>Nossas atividades vão além do cuidado: são momentos de alegria, amizade e convivência,onde cada senhora se sente em casa, valorizada e feliz.</p>
                     <p>Do jogo de cartas à roda de conversa, a felicidade faz parte do cuidado em cada detalhe da nossa rotina.</p>
                 </div>
             </div>

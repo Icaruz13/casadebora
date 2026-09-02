@@ -752,7 +752,7 @@
                 var img = document.createElement('img');
                 img.src = foto;
                 img.alt = galeria.titulo;
-                // Se a imagem falhar ao carregar, ela é removida da galeria (sem aviso feio)
+                // Se a imagem falhar ao carregar, ela é removida da galeria (sem aviso)
                 img.onerror = function() {
                     this.onerror = null;
                     if (this.parentNode) {
